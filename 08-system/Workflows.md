@@ -43,3 +43,17 @@ End-to-end flows the vault is built around. Each maps to one or more slash comma
 2. `/client-doc` produces the deliverable in `01-select-safety/clients/<client>/`.
 3. Export to PDF for delivery (Obsidian → Export to PDF).
 4. Log the delivery in the client note.
+
+## Automation (already running)
+
+These run automatically — you don't trigger them.
+
+- **`updated:` auto-stamp.** Every time Claude edits a note in this vault, `.claude/hooks/bump-updated.py` updates the `updated:` YAML field to today's date. Templates and hidden paths are skipped. Works on every save, no commands needed.
+- **Session status injection.** When a new Claude Code session starts in this vault, `.claude/hooks/session-start.py` runs and gives Claude a status block: inbox count, active programs, stale safety docs, and a suggested first command. So the first thing Claude sees is what needs attention — without you having to brief it.
+
+Both live in `.claude/hooks/` and are wired via `.claude/settings.json`. To disable: comment out the hook in `settings.json`. To extend: see the script comments.
+
+## Not yet automated (next steps if you want it)
+
+- **Stop-of-session changelog** — log what files changed in a session to `08-system/Session-Log.md`. Skipped because the project-level git stop-hook already nags about uncommitted changes, and the bump-updated hook handles the per-file freshness already.
+- **Scheduled runs** (daily `/plan-today`, Friday `/weekly-review`) — requires either local cron (if you run Claude Code natively) or a GitHub Action on the vault repo (if web-only). Push the vault to GitHub first; then I can wire the action.
