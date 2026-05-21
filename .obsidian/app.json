@@ -1,0 +1,11 @@
+{
+  "promptDelete": false,
+  "alwaysUpdateLinks": true,
+  "newFileLocation": "folder",
+  "newFileFolderPath": "06-inbox/raw-notes",
+  "attachmentFolderPath": "06-inbox/screenshots",
+  "useMarkdownLinks": false,
+  "showLineNumber": true,
+  "trashOption": "local",
+  "spellcheck": true
+}

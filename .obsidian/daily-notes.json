@@ -1,0 +1,6 @@
+{
+  "folder": "00-command-center/daily",
+  "format": "YYYY-MM-DD",
+  "template": "07-templates/Daily-Note.md",
+  "autorun": false
+}
