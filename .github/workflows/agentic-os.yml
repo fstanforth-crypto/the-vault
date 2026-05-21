@@ -1,0 +1,79 @@
+# Agentic OS — scheduled vault automation
+#
+# Runs Claude Code in headless mode against this vault on a schedule and
+# commits the results back. Does NOT run until you:
+#   1. Push this vault to a GitHub repo
+#   2. Add a repo secret named ANTHROPIC_API_KEY
+#   3. (Optionally) Enable workflow_dispatch and run once manually to test
+#
+# Two safe headless jobs included — both write files, neither asks the user
+# any questions:
+#   - plan-today: regenerates 00-command-center/Today.md
+#   - weekly-review: regenerates 00-command-center/Weekly-Review.md
+#
+# /process-inbox is intentionally NOT scheduled because it expects confirmation
+# before moving files. If you want a headless variant, build a /auto-inbox
+# slash command that triages without prompting.
+
+name: Agentic OS
+
+on:
+  schedule:
+    # Times are UTC. Adjust to your timezone.
+    - cron: '0 12 * * 1-5'    # 07:00 ET Mon-Fri — daily plan
+    - cron: '0 21 * * 5'      # 16:00 ET Friday — weekly review
+  workflow_dispatch:
+    inputs:
+      command:
+        description: 'Slash command to run (e.g. /plan-today)'
+        required: true
+        default: '/plan-today'
+
+permissions:
+  contents: write
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install Claude Code
+        run: npm install -g @anthropic-ai/claude-code
+
+      - name: Pick command for this run
+        id: pick
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            CMD="${{ inputs.command }}"
+          elif [ "${{ github.event.schedule }}" = "0 21 * * 5" ]; then
+            CMD="/weekly-review"
+          else
+            CMD="/plan-today"
+          fi
+          echo "command=$CMD" >> "$GITHUB_OUTPUT"
+          echo "Running: $CMD"
+
+      - name: Run Claude Code headless
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          claude -p "${{ steps.pick.outputs.command }}" --dangerously-skip-permissions
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "agentic-os[bot]"
+          git config user.email "agentic-os@users.noreply.github.com"
+          git add -A
+          if git diff --staged --quiet; then
+            echo "No changes."
+            exit 0
+          fi
+          git commit -m "Auto: ${{ steps.pick.outputs.command }}"
+          git push

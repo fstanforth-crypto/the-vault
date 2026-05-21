@@ -1,0 +1,77 @@
+#!/usr/bin/env bash
+# Pre-commit hook: bump `updated:` frontmatter on every staged .md file.
+#
+# Mirrors what .claude/hooks/bump-updated.py does for Claude edits — but this
+# fires when you commit from any source (Obsidian, vim, GitHub UI), so plain
+# Obsidian edits still get their `updated:` field stamped before they land.
+#
+# Enable once:
+#   git -C "/home/user/The Vault" config core.hooksPath .githooks
+#
+# This file is tracked in git, so the script is portable across machines.
+
+set -e
+
+VAULT_ROOT="$(git rev-parse --show-toplevel)"
+TODAY="$(date +%Y-%m-%d)"
+CHANGED=0
+
+# Get staged markdown files only.
+STAGED_MD=$(git diff --cached --name-only --diff-filter=ACM | grep -E '\.md$' || true)
+
+if [ -z "$STAGED_MD" ]; then
+  exit 0
+fi
+
+while IFS= read -r REL; do
+  [ -z "$REL" ] && continue
+
+  # Skip templates (they contain {{date}} placeholders).
+  case "$REL" in
+    07-templates/*) continue ;;
+  esac
+
+  F="$VAULT_ROOT/$REL"
+  [ -f "$F" ] || continue
+
+  # Only touch files with YAML frontmatter.
+  head -n1 "$F" | grep -q '^---$' || continue
+
+  # Update or insert `updated:` field within the frontmatter block.
+  python3 - "$F" "$TODAY" <<'PY'
+import os, re, sys, tempfile
+path, today = sys.argv[1], sys.argv[2]
+with open(path, encoding="utf-8") as f:
+    text = f.read()
+if not text.startswith("---\n"):
+    sys.exit(0)
+end = text.find("\n---\n", 4)
+if end == -1:
+    sys.exit(0)
+front = text[4:end]
+new_front, n = re.subn(r"(?m)^updated:.*$", f"updated: {today}", front, count=1)
+if n == 0:
+    if re.search(r"(?m)^created:", new_front):
+        new_front = re.sub(r"(?m)^(created:.*)$", r"\1\nupdated: " + today, new_front, count=1)
+    else:
+        new_front = f"updated: {today}\n" + new_front
+if new_front == front:
+    sys.exit(0)
+new_text = f"---\n{new_front}\n---\n{text[end+5:]}"
+d = os.path.dirname(path)
+fd, tmp = tempfile.mkstemp(dir=d, prefix=".upd-", suffix=".tmp")
+with os.fdopen(fd, "w", encoding="utf-8") as t:
+    t.write(new_text)
+os.replace(tmp, path)
+PY
+
+  # Re-stage the file so the bump is included in this commit.
+  git add "$REL"
+  CHANGED=$((CHANGED + 1))
+done <<< "$STAGED_MD"
+
+if [ "$CHANGED" -gt 0 ]; then
+  echo "pre-commit: bumped updated: on $CHANGED note(s)"
+fi
+
+exit 0

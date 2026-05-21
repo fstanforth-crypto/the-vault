@@ -24,3 +24,6 @@ Structural changes to the vault. Append entries; don't rewrite history.
   - `bump-updated.py` — PostToolUse on Write/Edit/MultiEdit, auto-stamps `updated:` frontmatter on any edited note.
   - `session-start.py` — SessionStart, injects vault status (inbox, active programs, stale safety docs) as additional context.
 - `git init` + initial commit.
+- Added `.githooks/pre-commit` — stamps `updated:` on staged .md files when committing from any editor (Obsidian, vim, etc.). Enable with `git config core.hooksPath .githooks`.
+- Added `.github/workflows/agentic-os.yml` — scheduled GitHub Action template for daily `/plan-today` and weekly `/weekly-review`. Inert until vault is pushed to GitHub and `ANTHROPIC_API_KEY` secret is added.
+- Added `08-system/Automation-Setup.md` — single setup guide covering hooks, pre-commit, and the GitHub Actions path.
