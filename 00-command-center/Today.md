@@ -1,33 +1,33 @@
 ---
 type: daily-note
 status: in-progress
-created: 2026-05-25
-updated: 2026-05-25
+created: 2026-05-26
+updated: 2026-05-26
 tags: [daily]
 priority: high
 ---
 
-# Monday, May 25th 2026
+# Tuesday, May 26th 2026
 
 > Edited by hand or by `/plan-today`. Claude won't overwrite Notes or End-of-day sections.
 
 ## Top 3
-1. ⚠️ **STALE (5 days)** — [[driver-onboarding-workflow]] — wire MVR vendor webhook to auto-complete the MVR step. ~2hr
-   - *Why:* Still the only active program and still its declared `next_action`. Has been on the plan since 5/21 with no movement — either break ground on the webhook stub today or downgrade the program out of `build` until the MVR vendor is selected. Note the dependency list still shows MVR vendor as TBD; if vendor selection is the real blocker, surface that first.
+1. 🚨 **STALE (on plan since 5/21 — 6th day)** — [[driver-onboarding-workflow]] — decide today: wire the MVR webhook stub *or* move the program out of `build` back to `requirements` until an MVR vendor is selected. ~2hr or 15min to downgrade.
+   - *Why:* This is the only active program and this is its declared `next_action`. It has now sat unmoved for six days. Yesterday's plan said "break ground or downgrade today" — that didn't happen. The dependency list still shows `MVR vendor: TBD`, so if vendor selection is the real blocker the honest move is to flip `build_stage` back to `requirements` and unblock the calendar. No more carrying it forward un-touched.
 2. Draft DQ-file SOP via `/sop` and resolve the two open questions on [[driver-qualification-file]] (digital-vs-paper, retention-vs-insurance). ~45min
-   - *Why:* `01-select-safety/SOPs/` is empty — the SOP literally does not exist. It's named as a hard dependency in [[driver-onboarding-workflow]], so the onboarding program can't exit `build` until it's written. Unblocking #1.
-3. Process [[2026-05-21-fleet-mgr-call-eld-gaps]] from inbox → split into a research note + a candidate program-idea note. ~20min
-   - *Why:* Only item in `06-inbox/raw-notes/`, also carried from 5/22. Contains the HOS-digest client signal that could become program #2 once the onboarding workflow lands.
+   - *Why:* `01-select-safety/SOPs/` is still empty. The SOP is a hard dependency named in [[driver-onboarding-workflow]], so the onboarding program can't honestly stay in `build` until it's written. Unblocks #1 either way.
+3. Process [[2026-05-21-fleet-mgr-call-eld-gaps]] from inbox → split into a research note (HOS / personal conveyance audit) + a candidate program-idea note (weekly HOS-violation digest). ~20min
+   - *Why:* Still the only item in `06-inbox/raw-notes/` and now 5 days old. Sitting on it costs the chance to surface the short-haul-exemption audit and the HOS-digest program idea, both of which are higher-value than anything else in the pipeline once onboarding lands.
 
 ## Select Safety
 - [ ] Draft DQ-file SOP via `/sop`; file under `01-select-safety/SOPs/` and backlink from [[driver-qualification-file]] (see Top 3 #2)
-  - *Why:* Folder is empty; this is the gating dependency for the onboarding program.
+  - *Why:* Folder is still empty; gating dependency for the onboarding program.
 - [ ] Audit short-haul exemption usage flagged in the ELD-gaps inbox note against 49 CFR 395.1(e)
-  - *Why:* Two drivers on paper logs — compliance risk if the 150-air-mile radius / 14-hr duty math doesn't hold. Tied to the inbox triage above.
+  - *Why:* Two drivers on paper logs — compliance risk if the 150-air-mile radius / 14-hr duty math doesn't hold. Surfaces once Top 3 #3 splits the inbox note into a real research/audit note.
 
 ## Programs / builds
-- [ ] [[driver-onboarding-workflow]] — MVR webhook wiring (see Top 3 #1)
-  - *Why:* Single point of momentum on the only active program; flagged stale today.
+- [ ] [[driver-onboarding-workflow]] — MVR webhook wiring **or** stage downgrade (see Top 3 #1)
+  - *Why:* Single point of momentum on the only active program; sixth day flagged stale — the call has to be made today.
 
 ## Other
 - [ ] 
