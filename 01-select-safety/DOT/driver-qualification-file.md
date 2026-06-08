@@ -2,7 +2,7 @@
 type: dot-compliance
 status: active
 created: 2026-05-21
-updated: 2026-05-21
+updated: 2026-06-08
 tags: [dot, dq-file, driver-qualification]
 area: select-safety
 compliance_area: driver-qualification
@@ -65,4 +65,4 @@ A DOT auditor will spot-check a sample of DQ files. Each file should be complete
 ## Open questions
 
 - Current carrier policy on retaining beyond 3-year minimum (recommend match insurance retention).
-- Digital vs. paper DQ file SOP — verify the SOP exists in `01-select-safety/SOPs/`.
+- Digital vs. paper DQ file SOP — resolved 2026-06-08: see [[driver-qualification-file-sop]] (digital = system of record; retention 3-yr min, match insurance).

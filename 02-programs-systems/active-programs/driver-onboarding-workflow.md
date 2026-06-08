@@ -2,7 +2,7 @@
 type: program-spec
 status: active
 created: 2026-05-21
-updated: 2026-05-21
+updated: 2026-06-08
 tags: [program, driver-onboarding, dot, automation]
 area: select-safety
 program_name: Driver Onboarding Workflow
@@ -10,8 +10,8 @@ problem: Carriers lose DQ-file completeness during onboarding because the steps 
 users: [HR, safety manager, driver, dispatch]
 features: [DQ-file checklist, document upload, medical cert tracking, Clearinghouse query trigger, ready-to-drive signoff]
 build_stage: build
-dependencies: [DQ-file SOP, Clearinghouse account, MVR vendor]
-next_action: Wire MVR vendor webhook to mark MVR step complete automatically
+dependencies: [DQ-file SOP (drafted 2026-06-08), Clearinghouse account, MVR vendor (TBD — blocks build)]
+next_action: Select MVR vendor (Samba / DriverFacts / SambaSafety) — this gates the webhook wiring, which presupposed a vendor
 priority: high
 owner:
 ---
@@ -53,7 +53,7 @@ Onboarding a new driver requires 12-15 DOT-required artifacts (see [[driver-qual
 
 ## Dependencies
 
-- DQ-file SOP — must be finalized first (see `01-select-safety/SOPs/`).
+- DQ-file SOP — drafted 2026-06-08, see [[driver-qualification-file-sop]] (status: draft, pending review sign-off).
 - Clearinghouse account credentials and API access (if available).
 - MVR vendor selection — currently TBD.
 - Storage — where do PDFs live? S3? Carrier portal?
@@ -70,7 +70,7 @@ Onboarding a new driver requires 12-15 DOT-required artifacts (see [[driver-qual
 
 ## Next action
 
-Wire MVR vendor webhook to mark MVR step complete automatically. Owner TBD. Estimate: 2 days.
+Select the MVR vendor (Samba / DriverFacts / SambaSafety). This is the real blocker — the previously-listed "wire MVR vendor webhook" step presupposed a vendor that was never chosen. Once a vendor is committed, the webhook wiring is ~2 days. Owner TBD.
 
 ## Related
 
