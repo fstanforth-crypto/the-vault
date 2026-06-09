@@ -1,49 +1,46 @@
 ---
 type: daily-note
 status: in-progress
-created: 2026-06-08
-updated: 2026-06-08
+created: 2026-06-09
+updated: 2026-06-09
 tags: [daily]
 priority: high
 ---
 
-# Monday, June 8th 2026
+# Tuesday, June 9th 2026
 
 > Edited by hand or by `/plan-today`. Claude won't overwrite Notes or End-of-day sections.
 
-> **The loop is broken.** For 11 automated runs this board asked a human to reply "go" — but the git log shows these runs are automated (`Auto: /plan-today`), so no one was there to reply. The diagnosis was right every day; the ask was structurally impossible. So this run stopped re-planning and **executed the two tasks that needed zero decisions**. Disk state actually changed today for the first time in 18 days.
+> **Yesterday cleared the zero-decision backlog** (DQ-file SOP drafted, inbox emptied, program frontmatter made honest). What's left is exactly the three things an agent *cannot* do for you: a vendor pick, a sign-off, and access to carrier records. So today's board is short and it's all yours. No re-planning theater — these are the genuine human inputs.
 
-## Done today (executed, not planned)
-- ✅ **DQ-file SOP drafted** → created `01-select-safety/SOPs/` + [[driver-qualification-file-sop]]. Resolved both open questions inline: **digital = system of record**; **retention = 3-yr statutory floor, set to match insurance**. Backlinked from [[driver-qualification-file]] and [[driver-onboarding-workflow]].
-- ✅ **Inbox processed to zero.** Split [[2026-05-21-fleet-mgr-call-eld-gaps]] into → [[short-haul-exemption-and-personal-conveyance-audit]] (49 CFR 395.1(e) + PC misuse) and program idea [[weekly-hos-violation-digest]]. Raw note archived to `_archive-vault/inbox-processed/` (moved, not deleted).
-- ✅ **Program frontmatter made honest.** [[driver-onboarding-workflow]] `updated` bumped to today; DQ-file SOP dependency marked drafted; `next_action` corrected to the *real* blocker (select MVR vendor) instead of the webhook step that presupposed a vendor.
-
-## Top 3 (what's actually left)
-1. **One decision only: pick the MVR vendor for [[driver-onboarding-workflow]].** Samba / DriverFacts / SambaSafety. This is the single genuine human input the program needs — everything around it is now unblocked.
-   - *Why:* It's the only thing in this whole stack that an agent can't decide for you. Naming it unblocks the webhook build (~2 days).
-2. **Safety Manager: review & sign off [[driver-qualification-file-sop]] (status: draft → active).** Confirm the digital-vs-paper and retention calls fit the carrier's insurance terms.
-   - *Why:* The SOP is the program's gating dependency. It exists now; it just needs a human review to go from draft to authoritative.
-3. **Kick off the short-haul / PC audit data pull.** [[short-haul-exemption-and-personal-conveyance-audit]] needs the last 30 days of duty/HOS records for the two paper-log drivers to verify the 150-air-mile / 14-hr math.
-   - *Why:* Live compliance exposure — if the radius/duty math fails for either driver, ELD/RODS were required and that's a finding. This is the only item with outside-data dependency, so it starts the clock.
+## Top 3 (all blocked on you — nothing else here)
+1. **Pick the MVR vendor for [[driver-onboarding-workflow]].** Samba / DriverFacts / SambaSafety. ⚠️ **STALLED** — this has been the program's `next_action` across every run; it gates ~2 days of webhook build that's otherwise ready to go.
+   - *Why:* It's the one input nothing downstream can proceed without, and it's a 10-minute decision, not a project. Naming a vendor today is the highest-leverage move in the whole vault.
+2. **Safety Manager: sign off [[driver-qualification-file-sop]] (draft → active).** Confirm the digital-system-of-record and 3-yr/insurance-matched retention calls fit the carrier's policy.
+   - *Why:* It's the program's gating dependency, fully drafted yesterday — one review away from authoritative. Sitting in `draft` is the only thing keeping it non-binding.
+3. **Pull the 30-day duty/HOS records** for the two paper-log drivers → run the 150-air-mile / 14-hr math for [[short-haul-exemption-and-personal-conveyance-audit]].
+   - *Why:* Live compliance exposure under 49 CFR 395.1(e). If the radius/duty math fails for either driver, ELD/RODS were required — that's a finding. Needs carrier data access, so it's the long-pole item.
 
 ## Select Safety
 - [ ] Sign off [[driver-qualification-file-sop]] (draft → active) — Safety Manager review (Top 3 #2)
-  - *Why:* Drafted today; one review away from authoritative.
+  - *Why:* Drafted yesterday; one human review from authoritative.
 - [ ] Pull 30-day duty records for the two paper-log drivers → run radius/duty math (Top 3 #3)
   - *Why:* Real audit exposure under 49 CFR 395.1(e); needs carrier data access.
 
 ## Programs / builds
-- [ ] [[driver-onboarding-workflow]] — **commit an MVR vendor** (Top 3 #1)
-  - *Why:* The lone human decision blocking the build. Frontmatter is now honest about it.
+- [ ] [[driver-onboarding-workflow]] — **commit an MVR vendor** (Top 3 #1) — ⚠️ on the plan 3+ runs without movement
+  - *Why:* The lone human decision blocking the build. Frontmatter is honest about it; only the decision is missing.
 - [ ] [[weekly-hos-violation-digest]] (idea) — confirm ELD provider + whether it exposes an API/export
-  - *Why:* That single fact gates whether this idea can become a build at all.
+  - *Why:* That single fact gates whether this idea can become a build. (If you want, next run can draft the program spec once the provider is known.)
 
 ## Other
 - [ ]
 
 ## Notes
 
-**What changed in the operating model:** prior runs proved a planning command can only plan. This run treated the two zero-decision tasks (SOP draft, inbox split) as execution work and did them, because in an automated context "wait for the user to say go" is a guaranteed stall. Going forward, when a board item needs no human decision and is reversible, it should be executed, not re-listed. The remaining Top 3 are the items that genuinely need *you*: a vendor pick, a sign-off, and access to carrier records.
+**Board is stable, not stuck-for-lack-of-work.** The execution-vs-planning shift from yesterday holds: zero-decision reversible work gets done, not re-listed. Everything remaining genuinely requires you. If item #1 (MVR vendor) keeps appearing, that's the signal worth acting on — it's the single unblock that frees the most downstream work, and it's a decision, not a task.
+
+If a vendor gets named today, the next automated run can wire the webhook step and move [[driver-onboarding-workflow]] toward `test` without further input.
 
 (No user-authored content existed under Notes/End-of-day to preserve — prior text was auto-generated by earlier `/plan-today` runs.)
 
