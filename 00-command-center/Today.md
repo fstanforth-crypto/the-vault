@@ -1,46 +1,44 @@
 ---
 type: daily-note
 status: in-progress
-created: 2026-06-09
-updated: 2026-06-09
+created: 2026-06-10
+updated: 2026-06-10
 tags: [daily]
 priority: high
 ---
 
-# Tuesday, June 9th 2026
+# Wednesday, June 10th 2026
 
 > Edited by hand or by `/plan-today`. Claude won't overwrite Notes or End-of-day sections.
 
-> **Yesterday cleared the zero-decision backlog** (DQ-file SOP drafted, inbox emptied, program frontmatter made honest). What's left is exactly the three things an agent *cannot* do for you: a vendor pick, a sign-off, and access to carrier records. So today's board is short and it's all yours. No re-planning theater — these are the genuine human inputs.
+> **Same board as yesterday — by design, not neglect.** Nothing in the vault moved since 2026-06-08, because everything left is a human input an agent can't supply: a vendor pick, a sign-off, and access to carrier records. The reversible zero-decision work is already done. Today is three decisions/access tasks, all yours.
 
 ## Top 3 (all blocked on you — nothing else here)
-1. **Pick the MVR vendor for [[driver-onboarding-workflow]].** Samba / DriverFacts / SambaSafety. ⚠️ **STALLED** — this has been the program's `next_action` across every run; it gates ~2 days of webhook build that's otherwise ready to go.
-   - *Why:* It's the one input nothing downstream can proceed without, and it's a 10-minute decision, not a project. Naming a vendor today is the highest-leverage move in the whole vault.
-2. **Safety Manager: sign off [[driver-qualification-file-sop]] (draft → active).** Confirm the digital-system-of-record and 3-yr/insurance-matched retention calls fit the carrier's policy.
-   - *Why:* It's the program's gating dependency, fully drafted yesterday — one review away from authoritative. Sitting in `draft` is the only thing keeping it non-binding.
+1. **Pick the MVR vendor for [[driver-onboarding-workflow]].** Samba / DriverFacts / SambaSafety. 🚨 **STALLED 3+ days** — this has been the program's `next_action` every run since 2026-06-08; it gates ~2 days of webhook build that's otherwise ready.
+   - *Why:* The single highest-leverage move in the vault. A 10-minute decision unblocks the whole build chain. Nothing downstream can start until it's named.
+2. **Safety Manager: sign off [[driver-qualification-file-sop]] (draft → active).** Confirm the digital system-of-record and 3-yr / insurance-matched retention calls fit carrier policy.
+   - *Why:* Fully drafted 2026-06-08, one review from authoritative. Sitting in `draft` is the only thing keeping it non-binding.
 3. **Pull the 30-day duty/HOS records** for the two paper-log drivers → run the 150-air-mile / 14-hr math for [[short-haul-exemption-and-personal-conveyance-audit]].
    - *Why:* Live compliance exposure under 49 CFR 395.1(e). If the radius/duty math fails for either driver, ELD/RODS were required — that's a finding. Needs carrier data access, so it's the long-pole item.
 
 ## Select Safety
 - [ ] Sign off [[driver-qualification-file-sop]] (draft → active) — Safety Manager review (Top 3 #2)
-  - *Why:* Drafted yesterday; one human review from authoritative.
+  - *Why:* Drafted 2026-06-08; one human review from authoritative.
 - [ ] Pull 30-day duty records for the two paper-log drivers → run radius/duty math (Top 3 #3)
   - *Why:* Real audit exposure under 49 CFR 395.1(e); needs carrier data access.
 
 ## Programs / builds
-- [ ] [[driver-onboarding-workflow]] — **commit an MVR vendor** (Top 3 #1) — ⚠️ on the plan 3+ runs without movement
+- [ ] [[driver-onboarding-workflow]] — **commit an MVR vendor** (Top 3 #1) — 🚨 stalled 3+ days, no movement
   - *Why:* The lone human decision blocking the build. Frontmatter is honest about it; only the decision is missing.
 - [ ] [[weekly-hos-violation-digest]] (idea) — confirm ELD provider + whether it exposes an API/export
-  - *Why:* That single fact gates whether this idea can become a build. (If you want, next run can draft the program spec once the provider is known.)
+  - *Why:* That single fact gates whether this idea can become a build. Once the provider is known, a future run can draft the program spec.
 
 ## Other
 - [ ]
 
 ## Notes
 
-**Board is stable, not stuck-for-lack-of-work.** The execution-vs-planning shift from yesterday holds: zero-decision reversible work gets done, not re-listed. Everything remaining genuinely requires you. If item #1 (MVR vendor) keeps appearing, that's the signal worth acting on — it's the single unblock that frees the most downstream work, and it's a decision, not a task.
-
-If a vendor gets named today, the next automated run can wire the webhook step and move [[driver-onboarding-workflow]] toward `test` without further input.
+**The MVR-vendor item is now the story of this plan.** It's appeared on every board since 2026-06-08 with zero movement — that's the signal worth acting on. It's not a project; it's a one-line decision that frees ~2 days of ready-to-go build. If you do one thing today, do that: name the vendor and the next automated run can wire the webhook step and move [[driver-onboarding-workflow]] toward `test` without further input.
 
 (No user-authored content existed under Notes/End-of-day to preserve — prior text was auto-generated by earlier `/plan-today` runs.)
 
