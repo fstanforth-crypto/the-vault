@@ -1,34 +1,34 @@
 ---
 type: daily-note
 status: in-progress
-created: 2026-06-11
-updated: 2026-06-11
+created: 2026-06-12
+updated: 2026-06-12
 tags: [daily]
 priority: high
 ---
 
-# Thursday, June 11th 2026
+# Friday, June 12th 2026
 
 > Edited by hand or by `/plan-today`. Claude won't overwrite Notes or End-of-day sections.
 
-> **Fourth day on the same board.** Nothing in the vault has moved since 2026-06-08. Every remaining item is a human input an agent can't supply: a vendor pick, a sign-off, and access to carrier records. The reversible, zero-decision work is done. Today is three of *your* calls — make even one and the next automated run can pick up the slack.
+> **Fifth day on the same board.** Nothing in the vault has moved since 2026-06-08. The board hasn't changed because every remaining item needs *you*, not an agent: a vendor pick, a sign-off, and access to carrier records. The automated work is done and waiting. Three decisions stand between this plan and forward motion — make even one and the next run can build on it.
 
 ## Top 3 (all blocked on you — nothing else here)
-1. **Pick the MVR vendor for [[driver-onboarding-workflow]].** Samba / DriverFacts / SambaSafety. 🚨 **STALLED 4 days** — the program's `next_action` on every run since 2026-06-08; it gates ~2 days of webhook build that's otherwise ready.
+1. **Pick the MVR vendor for [[driver-onboarding-workflow]].** Samba / DriverFacts / SambaSafety. 🚨 **STALLED 5 days** — the program's `next_action` on every run since 2026-06-08; it gates ~2 days of webhook build that's otherwise ready.
    - *Why:* The single highest-leverage move in the vault. A 10-minute decision unblocks the whole build chain. Nothing downstream can start until it's named.
-2. **Safety Manager: sign off [[driver-qualification-file-sop]] (draft → active).** Confirm the digital system-of-record and 3-yr / insurance-matched retention calls fit carrier policy.
+2. **Safety Manager: sign off [[driver-qualification-file-sop]] (draft → active).** 🚨 **STALLED 4 days.** Confirm the digital system-of-record and 3-yr / insurance-matched retention calls fit carrier policy.
    - *Why:* Fully drafted 2026-06-08, one review from authoritative. Sitting in `draft` is the only thing keeping it non-binding.
-3. **Pull the 30-day duty/HOS records** for the two paper-log drivers → run the 150-air-mile / 14-hr math for [[short-haul-exemption-and-personal-conveyance-audit]].
+3. **Pull the 30-day duty/HOS records** for the two paper-log drivers → run the 150-air-mile / 14-hr math for [[short-haul-exemption-and-personal-conveyance-audit]]. 🚨 **STALLED 4 days.**
    - *Why:* Live compliance exposure under 49 CFR 395.1(e). If the radius/duty math fails for either driver, ELD/RODS were required — that's a finding. Needs carrier data access, so it's the long-pole item.
 
 ## Select Safety
-- [ ] Sign off [[driver-qualification-file-sop]] (draft → active) — Safety Manager review (Top 3 #2)
+- [ ] Sign off [[driver-qualification-file-sop]] (draft → active) — Safety Manager review (Top 3 #2) — 🚨 stalled 4 days
   - *Why:* Drafted 2026-06-08; one human review from authoritative.
-- [ ] Pull 30-day duty records for the two paper-log drivers → run radius/duty math (Top 3 #3)
+- [ ] Pull 30-day duty records for the two paper-log drivers → run radius/duty math (Top 3 #3) — 🚨 stalled 4 days
   - *Why:* Real audit exposure under 49 CFR 395.1(e); needs carrier data access.
 
 ## Programs / builds
-- [ ] [[driver-onboarding-workflow]] — **commit an MVR vendor** (Top 3 #1) — 🚨 stalled 4 days, no movement
+- [ ] [[driver-onboarding-workflow]] — **commit an MVR vendor** (Top 3 #1) — 🚨 stalled 5 days, no movement
   - *Why:* The lone human decision blocking the build. Frontmatter is honest about it; only the decision is missing.
 - [ ] [[weekly-hos-violation-digest]] (idea) — confirm ELD provider + whether it exposes an API/export
   - *Why:* That single fact gates whether this idea can become a build. Once the provider is known, a future run can draft the program spec.
@@ -38,7 +38,7 @@ priority: high
 
 ## Notes
 
-**The MVR-vendor item is the whole story of this plan — and it's now four days old.** It's appeared on every board since 2026-06-08 with zero movement; that streak is the signal worth acting on. It's not a project, it's a one-line decision that frees ~2 days of ready-to-go build. If you do one thing today, do that: name the vendor and the next automated run can wire the webhook step and move [[driver-onboarding-workflow]] toward `test` without further input.
+**The MVR-vendor item is the whole story of this plan — and it's now five days old.** It's appeared on every board since 2026-06-08 with zero movement; that streak is the signal worth acting on. It's not a project, it's a one-line decision that frees ~2 days of ready-to-go build. If you do one thing today, do that: name the vendor and the next automated run can wire the webhook step and move [[driver-onboarding-workflow]] toward `test` without further input.
 
 (No user-authored content existed under Notes/End-of-day to preserve — prior text was auto-generated by earlier `/plan-today` runs.)
 
@@ -46,3 +46,5 @@ priority: high
 - What moved forward?
 - What stalled?
 - What goes to inbox?
+</content>
+</invoke>
