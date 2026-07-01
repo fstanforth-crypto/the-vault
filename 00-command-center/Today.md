@@ -1,36 +1,36 @@
 ---
 type: daily-note
 status: in-progress
-created: 2026-06-30
-updated: 2026-06-30
+created: 2026-07-01
+updated: 2026-07-01
 tags: [daily]
 priority: high
 ---
 
-# Tuesday, June 30th 2026
+# Wednesday, July 1st 2026
 
 > Edited by hand or by `/plan-today`. Claude won't overwrite Notes or End-of-day sections.
 
-> **Day 22, same three decisions.** Nothing in the vault has moved since 2026-06-08 — every `updated:` date is unchanged. The build chain for [[driver-onboarding-workflow]] is still idle behind three calls only you can make: a vendor pick, a sign-off, a data pull. None is a project; each is a single human decision an agent can't make for you. Clear one today and an automated run can pick up the build. There is exactly one item below that *isn't* blocked on a decision — the pre-trip training — and it's now the stalest live procedure in the vault.
+> **Day 23, same three decisions.** Nothing in the vault has moved since 2026-06-08 — every `updated:` date is unchanged for another day. The build chain for [[driver-onboarding-workflow]] stays idle behind three calls only you can make: a vendor pick, a sign-off, a data pull. None is a project; each is a single human decision an agent can't make for you. Clear one today and an automated run can carry the build forward. The one item below that *isn't* blocked on a decision — the pre-trip training — is now **41 days** untouched, the stalest live procedure in the vault.
 
 ## Top 3 (all blocked on you — nothing else here)
-1. **Pick the MVR vendor for [[driver-onboarding-workflow]].** Samba / DriverFacts / SambaSafety. 🚨 **STALLED 22 days** — the program's `next_action` on every run since 2026-06-08; it gates the webhook wiring (~2 days of build) that's otherwise ready to go.
+1. **Pick the MVR vendor for [[driver-onboarding-workflow]].** Samba / DriverFacts / SambaSafety. 🚨 **STALLED 23 days** — the program's `next_action` on every run since 2026-06-08; it gates the webhook wiring (~2 days of build) that's otherwise ready to go.
    - *Why:* Highest-leverage move in the vault. A ~10-minute decision unblocks the whole build chain — nothing downstream can start until the vendor is named.
-2. **Safety Manager: sign off [[driver-qualification-file-sop]] (draft → active).** 🚨 **STALLED 22 days.** Confirm the digital system-of-record and the 3-yr / insurance-matched retention calls fit carrier policy.
+2. **Safety Manager: sign off [[driver-qualification-file-sop]] (draft → active).** 🚨 **STALLED 23 days.** Confirm the digital system-of-record and the 3-yr / insurance-matched retention calls fit carrier policy.
    - *Why:* Fully drafted 2026-06-08, one review from authoritative. Sitting in `draft` is the only thing keeping it non-binding. Cites 49 CFR 391.51.
-3. **Pull the 30-day duty/HOS records** for the two paper-log drivers → run the 150-air-mile / 14-hr math for [[short-haul-exemption-and-personal-conveyance-audit]]. 🚨 **STALLED 22 days.**
+3. **Pull the 30-day duty/HOS records** for the two paper-log drivers → run the 150-air-mile / 14-hr math for [[short-haul-exemption-and-personal-conveyance-audit]]. 🚨 **STALLED 23 days.**
    - *Why:* Live compliance exposure under 49 CFR 395.1(e). If the radius/duty math fails for either driver, ELD/RODS were required — that's a finding. Needs carrier data access, so it's the long-pole item; start it first if you can only do one.
 
 ## Select Safety
-- [ ] Sign off [[driver-qualification-file-sop]] (draft → active) — Safety Manager review (Top 3 #2) — 🚨 stalled 22 days
+- [ ] Sign off [[driver-qualification-file-sop]] (draft → active) — Safety Manager review (Top 3 #2) — 🚨 stalled 23 days
   - *Why:* Drafted 2026-06-08; one human review from authoritative.
-- [ ] Pull 30-day duty records for the two paper-log drivers → run radius/duty math (Top 3 #3) — 🚨 stalled 22 days
+- [ ] Pull 30-day duty records for the two paper-log drivers → run radius/duty math (Top 3 #3) — 🚨 stalled 23 days
   - *Why:* Real audit exposure under 49 CFR 395.1(e); needs carrier data access.
 - [ ] Deliver new-driver demo + annual refresher for [[pre-trip-inspection]]; document completion (retain 3 yrs)
-  - *Why:* The one active safety item **not** blocked on a decision — it just needs scheduling. Procedure has sat untouched since 2026-05-21 (🚨 **40 days** — now the stalest live procedure in the vault); training delivery is what makes it real under 49 CFR 391.
+  - *Why:* The one active safety item **not** blocked on a decision — it just needs scheduling. Procedure untouched since 2026-05-21 (🚨 **41 days** — the stalest live procedure in the vault); training delivery is what makes it real under 49 CFR 391.
 
 ## Programs / builds
-- [ ] [[driver-onboarding-workflow]] — **commit an MVR vendor** (Top 3 #1) — 🚨 stalled 22 days, no movement
+- [ ] [[driver-onboarding-workflow]] — **commit an MVR vendor** (Top 3 #1) — 🚨 stalled 23 days, no movement
   - *Why:* The lone human decision blocking the build. Frontmatter is honest about it; only the decision is missing.
 - [ ] [[weekly-hos-violation-digest]] (idea) — confirm ELD provider + whether it exposes an API/export
   - *Why:* That single fact gates whether this idea can become a build. Once the provider is known, a future run can draft the program spec.
@@ -40,7 +40,7 @@ priority: high
 
 ## Notes
 
-**Day 22, three decisions, zero movement.** The MVR-vendor pick has appeared on every board since 2026-06-08 — that unbroken streak, not the task list, is the signal worth acting on. None of the Top 3 is a project; each is a single human call (a vendor, a sign-off, a data pull) an agent cannot make for you. If you do exactly one thing today, name the MVR vendor: the next automated run can then wire the webhook step and push [[driver-onboarding-workflow]] toward `test` with no further input from you. If you want a task that *isn't* blocked, the pre-trip inspection training (Select Safety, third item) is yours to schedule — and at 40 days untouched, it's the stalest live procedure in the vault.
+**Day 23, three decisions, zero movement.** The MVR-vendor pick has now appeared on every board since 2026-06-08 — 23 straight days. That unbroken streak, not the task list, is the signal worth acting on. None of the Top 3 is a project; each is a single human call (a vendor, a sign-off, a data pull) an agent cannot make for you. If you do exactly one thing today, name the MVR vendor: the next automated run can then wire the webhook step and push [[driver-onboarding-workflow]] toward `test` with no further input from you. If you want a task that *isn't* blocked, the pre-trip inspection training (Select Safety, third item) is yours to schedule — at 41 days untouched, it's the stalest live procedure in the vault.
 
 (No user-authored content existed under Notes/End-of-day to preserve — prior text was auto-generated by earlier `/plan-today` runs.)
 
@@ -48,3 +48,5 @@ priority: high
 - What moved forward?
 - What stalled?
 - What goes to inbox?
+</content>
+</invoke>
