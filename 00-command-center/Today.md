@@ -1,45 +1,45 @@
 ---
 type: daily-note
 status: in-progress
-created: 2026-07-08
-updated: 2026-07-08
+created: 2026-07-09
+updated: 2026-07-09
 tags: [daily]
 priority: high
 ---
 
-# Wednesday, July 8th 2026
+# Thursday, July 9th 2026
 
 > Edited by hand or by `/plan-today`. Claude won't overwrite Notes or End-of-day.
 
-> **Day 30. Seventh run. The board has not moved once.** Every `updated:` date is still `2026-06-08` (pre-trip: `2026-05-21`). I've written this plan six times and the three blocks are identical every time, because all three are one-human-decision items I cannot advance for you. Re-listing them a seventh time changes nothing — so I'm not going to. **One binary today: reply with a single word to the one line below, or close the vault.** Anything else is Day 31.
+> **Day 31. Eighth run. Yesterday I promised not to re-plan these three again — so I won't.** I verified the board this morning: every `updated:` date is still `2026-06-08` or `2026-05-21`. Not one item has moved in 31 days across eight `/plan-today` runs. That is no longer a planning problem, and dressing it up as a fresh plan an eighth time would be me lying to you. So today is not a plan. It's a triage.
 
-## The one line
-**Type one of these. That's the whole plan.**
-- **`vendor`** → I pull a Samba vs. DriverFacts vs. SambaSafety comparison (pricing, MVR coverage, continuous-monitoring, API/webhook fit) right now, so the [[driver-onboarding-workflow]] pick becomes an informed 10-minute call instead of a 30-day stall. *This is the single highest-leverage move — it unblocks ~2 days of ready-to-build webhook work.*
-- **`sop`** → I open [[driver-qualification-file-sop]] and walk you through the one Safety Manager sign-off it needs (confirm digital system-of-record + retention rule). Draft → active in one pass. Cites 49 CFR 391.51.
-- **`hos`** → I lay out exactly which 30-day duty/HOS records to pull for the two paper-log drivers so we can run the 150-air-mile / 14-hr math for [[short-haul-exemption-and-personal-conveyance-audit]]. Live exposure under 49 CFR 395.1(e).
-- **`train`** → I draft the schedule + completion log for the pre-trip refresher (see below) — the only live item blocked on *nothing but calendar time*.
-- **`archive X`** → name any item that isn't actually real and I move it to `_archive-vault/` so it stops resurfacing.
+## The real question today
+The evidence says these three items are **not actually priorities** — a real priority moves at least once in a month. Priorities aren't things you write down; they're things you touch. For each item below, pick **commit** or **archive**. That's the whole exercise.
+
+| # | Item | Blocked on | Commit means | Archive means |
+|---|------|-----------|--------------|---------------|
+| 1 | [[driver-onboarding-workflow]] | Pick MVR vendor | Reply `vendor` → I run the Samba/DriverFacts/SambaSafety comparison now | `archive 1` → moves to `_archive-vault/`, stops the webhook work with it |
+| 2 | [[driver-qualification-file-sop]] | One Safety Manager sign-off | Reply `sop` → I walk the single 391.51 sign-off, draft→active in one pass | `archive 2` → the SOP isn't real; the DQ-file work pauses |
+| 3 | [[short-haul-exemption-and-personal-conveyance-audit]] | Pull 30-day duty records | Reply `hos` → I list exactly which records to pull for the two paper-log drivers | `archive 3` → accept the 395.1(e) exposure sits unquantified |
+| 4 | [[pre-trip-inspection]] refresher | Nothing but calendar time | Reply `train` → I build the schedule + completion log now | `archive 4` → the stalest live procedure (48+ days) goes cold |
+
+## What I recommend
+**Item 4 (`train`) if you want one win, item 1 (`vendor`) if you want the highest leverage.** Item 4 is the only one blocked on *nothing but you starting it* — no vendor, no sign-off, no data pull. It's the cleanest way to prove the board can move at all. Item 1 unblocks the most downstream work but needs a vendor decision you've deferred eight times.
+
+If none of these earns a reply today, that is itself the answer: reply **`archive all`** and I clear the board so the vault stops pretending this is active work. A short honest list beats a long stalled one.
 
 ## Select Safety
-- [ ] Sign off [[driver-qualification-file-sop]] (draft → active) — 🚨 **stalled 30 days**; one review from binding, 49 CFR 391.51
-- [ ] Pull 30-day duty records → radius/duty math for [[short-haul-exemption-and-personal-conveyance-audit]] — 🚨 **stalled 30 days**; real audit exposure, 49 CFR 395.1(e); long pole (needs carrier data access)
-- [ ] Deliver new-driver demo + annual refresher for [[pre-trip-inspection]]; document completion (retain 3 yrs) — 🚨 **48 days untouched**, stalest live procedure in the vault
-  - *Why in today's plan:* The only active safety item **not** blocked on a decision. Nothing stops you starting it today — reply `train` and I'll build the schedule.
+- [ ] Decide items 2, 3, 4 above — **commit or archive** (see table). 🚨 stalled 31 days.
 
 ## Programs / builds
-- [ ] [[driver-onboarding-workflow]] — commit an MVR vendor — 🚨 **stalled 30 days**; gates all downstream webhook work. Reply `vendor`.
-- [ ] [[weekly-hos-violation-digest]] (idea) — confirm ELD provider + whether it exposes an API/export
-  - *Why in today's plan:* That one fact decides whether this idea can even become a build.
+- [ ] Decide item 1 above — **commit or archive** (see table). 🚨 stalled 31 days; gates all webhook work.
 
 ## Other
 - [ ]
 
 ## Notes
 
-**The streak is now the only real finding.** Thirty days, seven `/plan-today` runs, zero `updated:` changes. I've concluded that re-arguing the same three items in longer and longer prose is *my* failure mode, not a plan — so this note is deliberately stripped to a single reply-one-word decision. If a word comes back, we make progress today. If not, the honest read is that these three items may not actually be priorities, and the most useful thing I can do is help you archive them — reply `archive` with the item name.
-
-I am not going to write an eighth version of this argument tomorrow. If the board is unchanged at the next run, I'll open by asking whether these three should be archived rather than re-planned.
+Day 31 read: the streak (31 days / 8 runs / 0 movement) is the only finding, and I've stopped treating it as something more plans will fix. I did not re-list the items as a to-do this run — I converted them to a commit-or-archive decision, because the pattern says at least some of these aren't real priorities. My job today isn't to nag; it's to help you make the board honest. One reply moves us forward; `archive all` also moves us forward. Only silence doesn't.
 
 (No user-authored Notes/End-of-day content existed to preserve — prior text was auto-generated by earlier `/plan-today` runs.)
 
