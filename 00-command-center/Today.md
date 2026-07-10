@@ -1,45 +1,42 @@
 ---
 type: daily-note
 status: in-progress
-created: 2026-07-09
-updated: 2026-07-09
+created: 2026-07-10
+updated: 2026-07-10
 tags: [daily]
 priority: high
 ---
 
-# Thursday, July 9th 2026
+# Friday, July 10th 2026
 
 > Edited by hand or by `/plan-today`. Claude won't overwrite Notes or End-of-day.
 
-> **Day 31. Eighth run. Yesterday I promised not to re-plan these three again — so I won't.** I verified the board this morning: every `updated:` date is still `2026-06-08` or `2026-05-21`. Not one item has moved in 31 days across eight `/plan-today` runs. That is no longer a planning problem, and dressing it up as a fresh plan an eighth time would be me lying to you. So today is not a plan. It's a triage.
+> **Day 32. Ninth run. Yesterday's commit-or-archive offer got no reply, and the board still hasn't moved** — every `updated:` is `2026-06-08` or `2026-05-21`. The recent commits are all `Auto: /plan-today`, which means this may be running on a schedule with no one reading it. So I'm not re-planning or re-arguing. Same four decisions, stated once, plainly.
 
-## The real question today
-The evidence says these three items are **not actually priorities** — a real priority moves at least once in a month. Priorities aren't things you write down; they're things you touch. For each item below, pick **commit** or **archive**. That's the whole exercise.
+## The only thing to do today
+Pick **commit** or **archive** for any row. One reply moves it; `archive all` clears the board. No reply = these aren't priorities, and the plan will keep saying the same thing tomorrow.
 
-| # | Item | Blocked on | Commit means | Archive means |
-|---|------|-----------|--------------|---------------|
-| 1 | [[driver-onboarding-workflow]] | Pick MVR vendor | Reply `vendor` → I run the Samba/DriverFacts/SambaSafety comparison now | `archive 1` → moves to `_archive-vault/`, stops the webhook work with it |
-| 2 | [[driver-qualification-file-sop]] | One Safety Manager sign-off | Reply `sop` → I walk the single 391.51 sign-off, draft→active in one pass | `archive 2` → the SOP isn't real; the DQ-file work pauses |
-| 3 | [[short-haul-exemption-and-personal-conveyance-audit]] | Pull 30-day duty records | Reply `hos` → I list exactly which records to pull for the two paper-log drivers | `archive 3` → accept the 395.1(e) exposure sits unquantified |
-| 4 | [[pre-trip-inspection]] refresher | Nothing but calendar time | Reply `train` → I build the schedule + completion log now | `archive 4` → the stalest live procedure (48+ days) goes cold |
+| # | Item | Blocked on | `commit` reply | `archive` reply |
+|---|------|-----------|----------------|-----------------|
+| 1 | [[driver-onboarding-workflow]] | Pick MVR vendor | `vendor` → I run the Samba/DriverFacts/SambaSafety comparison | `archive 1` |
+| 2 | [[driver-qualification-file-sop]] | One Safety Manager sign-off | `sop` → I draft the 391.51 sign-off draft→active | `archive 2` |
+| 3 | [[short-haul-exemption-and-personal-conveyance-audit]] | Pull 30-day duty records | `hos` → I list the exact records for the two paper-log drivers | `archive 3` |
+| 4 | [[pre-trip-inspection]] refresher | Nothing — just starting | `train` → I build the schedule + completion log | `archive 4` |
 
-## What I recommend
-**Item 4 (`train`) if you want one win, item 1 (`vendor`) if you want the highest leverage.** Item 4 is the only one blocked on *nothing but you starting it* — no vendor, no sign-off, no data pull. It's the cleanest way to prove the board can move at all. Item 1 unblocks the most downstream work but needs a vendor decision you've deferred eight times.
-
-If none of these earns a reply today, that is itself the answer: reply **`archive all`** and I clear the board so the vault stops pretending this is active work. A short honest list beats a long stalled one.
+Highest leverage: **item 1**. Easiest win: **item 4** (blocked on nothing but you).
 
 ## Select Safety
-- [ ] Decide items 2, 3, 4 above — **commit or archive** (see table). 🚨 stalled 31 days.
+- [ ] Decide items 2, 3, 4 — commit or archive. 🚨 stalled 32 days.
 
 ## Programs / builds
-- [ ] Decide item 1 above — **commit or archive** (see table). 🚨 stalled 31 days; gates all webhook work.
+- [ ] Decide item 1 — commit or archive. 🚨 stalled 32 days; gates all webhook work.
 
 ## Other
 - [ ]
 
 ## Notes
 
-Day 31 read: the streak (31 days / 8 runs / 0 movement) is the only finding, and I've stopped treating it as something more plans will fix. I did not re-list the items as a to-do this run — I converted them to a commit-or-archive decision, because the pattern says at least some of these aren't real priorities. My job today isn't to nag; it's to help you make the board honest. One reply moves us forward; `archive all` also moves us forward. Only silence doesn't.
+Day 32 read: no change from Day 31 except that the escalation itself got no response. I've stopped adding new framing each run — nine variations of "please decide" is its own kind of noise. If these auto-runs continue without a reply, the right fix is upstream (pause the scheduled `/plan-today`, or archive the board), not a longer note here.
 
 (No user-authored Notes/End-of-day content existed to preserve — prior text was auto-generated by earlier `/plan-today` runs.)
 
