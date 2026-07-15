@@ -1,17 +1,17 @@
 ---
 type: daily-note
 status: in-progress
-created: 2026-07-14
-updated: 2026-07-14
+created: 2026-07-15
+updated: 2026-07-15
 tags: [daily]
 priority: high
 ---
 
-# Tuesday, July 14th 2026
+# Wednesday, July 15th 2026
 
 > Edited by hand or by `/plan-today`. Claude won't overwrite Notes or End-of-day.
 
-> **Day 36. Eleventh run. Unchanged since Day 32.** Every board item still reads `updated: 2026-06-08` or earlier; the git log is an unbroken chain of `Auto:` commits with no reply. Same four decisions, same one-line ask. No new framing — that's the point.
+> **Day 37. Twelfth run. Unchanged since Day 32.** Every board item still reads `updated: 2026-06-08` or earlier; the git log is an unbroken chain of `Auto:` commits with no reply. Same four decisions, same one-line ask. No new framing — that's the point.
 
 ## The only thing to do today
 Reply with one word to move a row. `archive all` clears the board. No reply keeps the plan identical tomorrow.
@@ -26,10 +26,10 @@ Reply with one word to move a row. `archive all` clears the board. No reply keep
 Highest leverage: **item 1**. Easiest win: **item 4** (blocked on nothing but you).
 
 ## Select Safety
-- [ ] Decide items 2, 3, 4 — commit or archive. 🚨 stalled 36 days.
+- [ ] Decide items 2, 3, 4 — commit or archive. 🚨 stalled 37 days.
 
 ## Programs / builds
-- [ ] Decide item 1 — commit or archive. 🚨 stalled 36 days; gates all webhook work.
+- [ ] Decide item 1 — commit or archive. 🚨 stalled 37 days; gates all webhook work.
 
 ## Other
 - [ ]
