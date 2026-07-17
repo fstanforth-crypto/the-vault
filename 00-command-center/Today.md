@@ -1,17 +1,17 @@
 ---
 type: daily-note
 status: in-progress
-created: 2026-07-16
-updated: 2026-07-16
+created: 2026-07-17
+updated: 2026-07-17
 tags: [daily]
 priority: high
 ---
 
-# Thursday, July 16th 2026
+# Friday, July 17th 2026
 
 > Edited by hand or by `/plan-today`. Claude won't overwrite Notes or End-of-day.
 
-> **Day 38. Thirteenth run. Unchanged since Day 32.** Every board item still reads `updated: 2026-06-08` or earlier (`pre-trip-inspection` is `2026-05-21`); the git log is an unbroken chain of `Auto:` commits with no reply. Same four decisions, same one-line ask. No new framing — that's the point.
+> **Day 39. Fourteenth run. Unchanged since Day 32.** Every board item still reads `updated: 2026-06-08` or earlier (`pre-trip-inspection` is `2026-05-21`); the git log is an unbroken chain of `Auto:` commits with no reply. Same four decisions, same one-line ask.
 
 ## The only thing to do today
 Reply with one word to move a row. `archive all` clears the board. No reply keeps the plan identical tomorrow.
@@ -26,10 +26,10 @@ Reply with one word to move a row. `archive all` clears the board. No reply keep
 Highest leverage: **item 1**. Easiest win: **item 4** (blocked on nothing but you).
 
 ## Select Safety
-- [ ] Decide items 2, 3, 4 — commit or archive. 🚨 stalled 38 days.
+- [ ] Decide items 2, 3, 4 — commit or archive. 🚨 stalled 39 days.
 
 ## Programs / builds
-- [ ] Decide item 1 — commit or archive. 🚨 stalled 38 days; gates all webhook work.
+- [ ] Decide item 1 — commit or archive. 🚨 stalled 39 days; gates all webhook work.
 
 ## Other
 - [ ]
@@ -44,3 +44,5 @@ If these auto-runs keep landing with no reply, the fix is upstream — pause the
 - What moved forward?
 - What stalled?
 - What goes to inbox?
+</content>
+</invoke>
