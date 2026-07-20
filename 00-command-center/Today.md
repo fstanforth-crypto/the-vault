@@ -1,35 +1,42 @@
 ---
 type: daily-note
 status: in-progress
-created: 2026-07-17
-updated: 2026-07-17
+created: 2026-07-20
+updated: 2026-07-20
 tags: [daily]
 priority: high
 ---
 
-# Friday, July 17th 2026
+# Monday, July 20th 2026
 
-> Edited by hand or by `/plan-today`. Claude won't overwrite Notes or End-of-day.
+> Written by `/plan-today`. Notes and End-of-day are left untouched.
 
-> **Day 39. Fourteenth run. Unchanged since Day 32.** Every board item still reads `updated: 2026-06-08` or earlier (`pre-trip-inspection` is `2026-05-21`); the git log is an unbroken chain of `Auto:` commits with no reply. Same four decisions, same one-line ask.
+> **Day 42. Nothing has moved since 2026-06-08.** Every board item below still reads `updated: 2026-06-08` or earlier (`pre-trip-inspection` is `2026-05-21`). Since Day 32 the git history is an unbroken chain of `Auto: /plan-today` / `Auto: /weekly-review` commits with zero human replies. Regenerating this board a fifteenth time changes nothing.
 
-## The only thing to do today
-Reply with one word to move a row. `archive all` clears the board. No reply keeps the plan identical tomorrow.
+## Read this first
+This plan has been identical for ~10 days and the scheduled run keeps re-committing it. **The useful action is upstream, not here:**
 
+- **Pause the schedule** — stop the cron/loop firing `/plan-today` so it stops committing noise. (Say `pause` and I'll find and disable it.)
+- **or `archive all`** — clear the board to `_archive-vault/` and start clean.
+- **or move one row** — reply with a keyword below and I do the work.
+
+No reply = this exact file lands again tomorrow.
+
+## The board (unchanged, still accurate)
 | # | Item | Blocked on | `commit` reply | `archive` reply |
 |---|------|-----------|----------------|-----------------|
-| 1 | [[driver-onboarding-workflow]] | Pick MVR vendor | `vendor` → I run the Samba/DriverFacts/SambaSafety comparison | `archive 1` |
-| 2 | [[driver-qualification-file-sop]] | One Safety Manager sign-off | `sop` → I draft the 391.51 sign-off draft→active | `archive 2` |
+| 1 | [[driver-onboarding-workflow]] | Pick MVR vendor | `vendor` → I run the Samba / DriverFacts / SambaSafety comparison | `archive 1` |
+| 2 | [[driver-qualification-file-sop]] | One Safety Manager sign-off | `sop` → I draft the §391.51 sign-off (draft→active) | `archive 2` |
 | 3 | [[short-haul-exemption-and-personal-conveyance-audit]] | Pull 30-day duty records | `hos` → I list the exact records for the two paper-log drivers | `archive 3` |
 | 4 | [[pre-trip-inspection]] refresher | Nothing — just starting | `train` → I build the schedule + completion log | `archive 4` |
 
-Highest leverage: **item 1**. Easiest win: **item 4** (blocked on nothing but you).
+Highest leverage: **item 1** (gates all webhook work). Easiest win: **item 4** (blocked on nothing but you).
 
 ## Select Safety
-- [ ] Decide items 2, 3, 4 — commit or archive. 🚨 stalled 39 days.
+- [ ] Decide items 2, 3, 4 — commit or archive. 🚨 stalled 42 days.
 
 ## Programs / builds
-- [ ] Decide item 1 — commit or archive. 🚨 stalled 39 days; gates all webhook work.
+- [ ] Decide item 1 — commit or archive. 🚨 stalled 42 days; gates all webhook work.
 
 ## Other
 - [ ]
@@ -44,5 +51,3 @@ If these auto-runs keep landing with no reply, the fix is upstream — pause the
 - What moved forward?
 - What stalled?
 - What goes to inbox?
-</content>
-</invoke>
