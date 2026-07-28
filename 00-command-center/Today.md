@@ -1,15 +1,15 @@
 ---
 type: daily-note
 status: in-progress
-created: 2026-07-27
-updated: 2026-07-27
+created: 2026-07-28
+updated: 2026-07-28
 tags: [daily]
 priority: high
 ---
 
-# Monday, July 27th 2026
+# Tuesday, July 28th 2026
 
-> Auto-written by `/plan-today`. **Day 49 stalled.** Nothing on the board has moved since 2026-06-08 (item 4 since 2026-05-21). This is the 18th consecutive auto-regeneration with no human reply. Last human commit: 2026-05-21. Keeping it short on purpose — a longer note doesn't help.
+> Auto-written by `/plan-today`. **Day 50 stalled.** Nothing on the board has moved since 2026-06-08 (item 4 since 2026-05-21). This is the 19th consecutive auto-regeneration with no human reply. Last human commit: 2026-05-21. Keeping it short on purpose — a longer note doesn't help.
 
 ## The one decision
 A scheduled job re-runs this every weekday at 07:00 ET and commits the result. **The board isn't the problem; the loop is.** Reply with any keyword and I do it in one commit:
@@ -18,7 +18,7 @@ A scheduled job re-runs this every weekday at 07:00 ET and commits the result. *
 - `archive all` → move the 4 rows to `_archive-vault/`, leave a clean board.
 - A row keyword below → I do that one piece of work.
 
-No reply = this file lands again Tuesday at 07:00 ET.
+No reply = this file lands again Wednesday at 07:00 ET.
 
 ## The board (unchanged, still accurate)
 | # | Item | Blocked on | `commit` keyword | archive |
@@ -31,10 +31,10 @@ No reply = this file lands again Tuesday at 07:00 ET.
 Highest leverage: **item 1** (gates all webhook work). Easiest win: **item 4**.
 
 ## Select Safety
-- [ ] Decide items 2, 3, 4 — commit or archive. 🚨 stalled 49 days.
+- [ ] Decide items 2, 3, 4 — commit or archive. 🚨 stalled 50 days.
 
 ## Programs / builds
-- [ ] Decide item 1 — commit or archive. 🚨 stalled 49 days; gates all webhook work.
+- [ ] Decide item 1 — commit or archive. 🚨 stalled 50 days; gates all webhook work.
 
 ## Other
 - [ ]
